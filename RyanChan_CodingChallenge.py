@@ -12,6 +12,7 @@ Assumptions
 """
 from collections import deque
 import sys
+import os
 
 
 class InputFile:
@@ -66,6 +67,24 @@ def merge_two_partitions(first_name, second_name, merged_name):
     Perform merge sort on two partitions. Writes it to a new temporary merged file.
     :return: name of merged file
     """
+    first_file, second_file, merged_file = open(first_name, 'r'), open(second_name, 'r'), open(merged_name, 'w')
+    line1, line2 = first_file.readline(), second_file.readline()
+    while line1 or line2:
+        if not line1:
+            merged_file.write(line2)
+            line2 = second_file.readline()
+        elif not line2:
+            merged_file.write(line1)
+            line1 = first_file.readline()
+        elif line1 > line2:
+            merged_file.write(line2)
+            line2 = second_file.readline()
+        else:
+            merged_file.write(line1)
+            line1 = first_file.readline()
+    merged_file.close()
+    os.remove(first_name)
+    os.remove(second_name)
     return merged_name
 
 
@@ -73,15 +92,33 @@ def write_merged_to_output(merged_name, output_name):
     """
     Writes all unique values from the final merged file to an output file.
     """
-    pass
+    merged_file, output = open(merged_name, 'r'), open(output_name, 'w')
+    line, curr = merged_file.readline(), ""
+    while line:
+        if curr != line:
+            output.write(line)
+            curr = line
+        line = merged_file.readline()
+    output.close()
+    os.remove(merged_name)
 
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         filename = sys.argv[1]
     else:
-        filename = "small_input.txt"
+        filename = "large_input.txt"
 
     file = InputFile(filename)
     file.split_file()
     queue = file.get_partitions()
+    merged_template, counter = "{0}", 0
+
+    while len(queue) > 1:
+        first_name = queue.popleft()
+        second_name = queue.popleft()
+        merged_name = merged_template.format(counter)
+        queue.append(merge_two_partitions(first_name, second_name, merged_name))
+        counter += 1
+
+    write_merged_to_output(queue.popleft(), "output.txt")
