@@ -16,7 +16,7 @@ import os
 
 
 class InputFile:
-    PARTITION_SIZE = 1000 # Set partition size to 1000 bytes
+    PARTITION_SIZE = 1000  # Set partition size to 1000 bytes
     PARTITION_NAME = "partition{0}"
 
     def __init__(self, filename):
