@@ -15,9 +15,12 @@ Given a large text file, that may not fit in memory, create a file:
 - Has 1000 Bytes of available memory for partition (can also change value to be smaller)
 
 ## Test Cases
-- Empty input file
-- Input file fits into memory
+- Empty input file "empty_input.txt"
+- Input file fits into memory "small_input.txt" / "small_input_2.txt"
 - Input file that does not fit into memory
+    - generic large text file "large_input.txt"
+    - generic very large text file "large_input_2.txt"
+    - very large textfile with only 3 distinct elements [a, b, r], "large_input_3.txt"
 
 ## Solutions
 Case 1: Empty input file
