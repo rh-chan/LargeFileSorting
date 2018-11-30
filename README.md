@@ -41,7 +41,7 @@ Case 3: Input file that does not fit into memory
 ## How To Run
 `python RyanChan_CodingChallenge.py large_input.txt`
 
-If argument are not given, automatically use `large_input.txt`
+Can replace argument with any test file. If argument are not given, automatically use `large_input.txt`
 
 ## Sources
 Large Text File: http://corpus.canterbury.ac.nz/descriptions/
