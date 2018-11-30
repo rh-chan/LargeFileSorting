@@ -3,8 +3,8 @@ Coding Challenge for Informatica
 
 ## Question
 Given a large text file, that may not fit in memory, create a file:
-    1. distinct words from the original file
-    2. sorted in ascending order
+- distinct words from the original file
+- sorted in ascending order
 
 ## Constraints
 - May not fit in memory
