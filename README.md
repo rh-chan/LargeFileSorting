@@ -32,3 +32,8 @@ Case 3: Input file that does not fit into memory
 1. Divide the file into partitions
 2. Perform Case 2 on each partition
 3. Merge every two partition until only one temp file
+
+## How To Run
+`python RyanChan_CodingChallenge.py large_input.txt`
+
+If argument are not given, automatically use `large_input.txt`
