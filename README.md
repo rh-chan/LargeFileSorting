@@ -18,7 +18,7 @@ Given a large text file, that may not fit in memory, create a file:
 - Input file fits into memory
 - Input file that does not fit into memory
 
-## Possible Solutions
+## Solutions
 Case 1: Empty input file
 - Return empty output file
 
