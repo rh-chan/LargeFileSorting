@@ -6,8 +6,9 @@ Given a very large text file, create a file:
 2. sorted in ascending order
 
 Assumptions
-- Case sensitive
+- case sensitive
 - does not filter words
+- has at least 1000 bytes of available memory for partition
 
 """
 from collections import deque

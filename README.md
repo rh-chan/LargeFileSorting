@@ -12,6 +12,7 @@ Given a large text file, that may not fit in memory, create a file:
 ## Assumptions
 - Case sensitive
 - Does not filter words (such as "Hi!" vs "Hi")
+- Has 1000 Bytes of available memory for partition (can also change value to be smaller)
 
 ## Test Cases
 - Empty input file
