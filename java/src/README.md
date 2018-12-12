@@ -28,8 +28,8 @@ Case 1: Empty input file
 
 Case 2: Input file that fits in memory
 1. for each line in input.txt:
-2. - for each word on the line:
-3. -- add each word to a set without duplicates
+2. | for each word on the line:
+3. || add each word to a set without duplicates
 4. sort the words in the set and write to output.xt
 
 Case 3: Input file that does not fit into memory
