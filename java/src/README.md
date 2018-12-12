@@ -38,11 +38,11 @@ Case 3: Input file that does not fit into memory
 3. Merge every two partition until only one temp file
 4. Find all unique files in that temp file (since it is sorted just need to store into one variable)
 
-## How To Run
+## Usage
 1. Compile using `javac LargeFileSorting.java`
-2. For any input file "input.txt": `java LargeFileSorting.java "input.txt"` or `java LargeFileSorting.java` uses "input.txt" by default.
+2. For any input file "input.txt": `java LargeFileSorting "input.txt"` or `java LargeFileSorting` uses "input.txt" by default.
 
-Note: File needs to be in the same directory as src
+For my sample test files, I would use `java LargeFileSorting ./input/input.txt` to create "./output.txt"
 
 ## Sources
 Large Text File: http://corpus.canterbury.ac.nz/descriptions/

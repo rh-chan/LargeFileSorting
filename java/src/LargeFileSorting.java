@@ -10,8 +10,8 @@
  */
 public class LargeFileSorting {
 
-    private static String DEFAULT_INPUT = "input.txt";
-    private static String OUTPUT = "out-%s";
+    private static String DEFAULT_INPUT = "./input/input.txt";
+    private static String OUTPUT = "output.txt";
 
 
     public static void main(String[] args){
